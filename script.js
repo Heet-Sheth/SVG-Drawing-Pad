@@ -20,7 +20,7 @@ canvas.addEventListener("mouseup", function () {
 canvas.addEventListener("mousemove", function (event) {
   if (isDrawing) {
     let points = canvas_area.getAttribute("points") ?? "";
-    points += event.clientX + "," + event.clientY + " ";
+    points += event.clientX + "," + (event.clientY - 80) + " ";
     canvas_area.setAttribute("points", points);
   }
 });
